@@ -723,7 +723,7 @@ class AsyncEthModuleTest:
             ]
         )
         txn = {
-            "chainId": 131277322940537,
+            "chainId": await async_w3.eth.chain_id,
             "from": keyfile_account.address,
             "to": keyfile_account.address,
             "value": Wei(0),
@@ -4031,7 +4031,7 @@ class EthModuleTest:
             ]
         )
         txn = {
-            "chainId": 131277322940537,
+            "chainId": w3.eth.chain_id,
             "from": keyfile_account.address,
             "to": keyfile_account.address,
             "value": Wei(0),
